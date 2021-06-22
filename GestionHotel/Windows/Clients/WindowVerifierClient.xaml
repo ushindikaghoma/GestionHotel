@@ -1,0 +1,73 @@
+﻿<Window x:Class="GestionHotel.Windows.Clients.WindowVerifierClient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:GestionHotel.Windows.Clients"
+        mc:Ignorable="d"
+        Title="WindowVerifierClient" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize">
+    <Grid  Background="#FF745512" Width="Auto" Height="Auto" >
+        <Grid Height="50" VerticalAlignment="Top"  Background="#FF745512">
+            <TextBlock Foreground="#ffffff" Text="Verification client" Margin="10" FontSize="27" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button x:Name="fermerWindowclientaffectes" Background="{x:Null}" BorderBrush="{x:Null}"
+                        VerticalAlignment="Center" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
+                        Click="fermerWindowclientaffectes_Click">
+                    <materialDesign:PackIcon Kind="Close" Foreground="White" Width="25" Height="25"/>
+                </Button>
+            </StackPanel>
+        </Grid>
+        <Grid Background="White" Margin="20 50 20 30">
+            <StackPanel Orientation="Vertical">
+                <Grid Height="45">
+                    <materialDesign:ColorZone Mode="PrimaryMid" Padding="5" Background="#FF745512">
+                        <DockPanel>
+                            <StackPanel Orientation="Horizontal" materialDesign:RippleAssist.IsCentered="True" 
+                                                HorizontalAlignment="Center" >
+                                <materialDesign:ColorZone Mode="Standard" Padding="10 4 8 4" CornerRadius="15" 
+                                                                  Panel.ZIndex="1" Margin="16 0 0 0" 
+                                                                  materialDesign:ShadowAssist.ShadowDepth="Depth1" Width="246">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Button Style="{DynamicResource MaterialDesignToolButton}">
+                                            <materialDesign:PackIcon Kind="Magnify" Opacity=".56" />
+                                        </Button>
+
+                                        <TextBox Grid.Column="1" Margin="8 0 0 0" materialDesign:HintAssist.Hint="Recherche" 
+                                                         materialDesign:TextFieldAssist.DecorationVisibility="Hidden" BorderThickness="0"
+                                                         VerticalAlignment="Center" x:Name="recherche_client_txt" />
+                                        <Button Style="{DynamicResource MaterialDesignToolButton}" Grid.Column="2">
+                                            <materialDesign:PackIcon Kind="Microphone" Opacity=".56" Margin="8 0 0 0" />
+                                        </Button>
+                                    </Grid>
+                                </materialDesign:ColorZone>
+                            </StackPanel>
+                        </DockPanel>
+                    </materialDesign:ColorZone>
+                </Grid>
+
+                <ListView Name="listeview_clients_affectes" ItemsSource="{Binding Items1}" Height="380" SelectionChanged="listeview_clients_affectes_SelectionChanged" >
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn DisplayMemberBinding="{Binding CodeClient}" Header="CODE CLIENT" />
+                            <GridViewColumn DisplayMemberBinding="{Binding CodeChambre}" Header="CODE CHAMBRE" />
+                            <GridViewColumn DisplayMemberBinding="{Binding NumAffectation}" Header="NUM AFFECTATION" />
+                            <GridViewColumn DisplayMemberBinding="{Binding DateAffectation}" Header="DATE AFFECTATION" />
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
