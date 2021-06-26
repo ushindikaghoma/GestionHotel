@@ -2,6 +2,7 @@
 using GestionHotel.Windows;
 using GestionHotel.Windows.Chambres;
 using GestionHotel.Windows.Clients;
+using GestionHotel.Windows.Paiement;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -65,10 +66,6 @@ namespace GestionHotel
             windowClientsAffectes.Show();
         }
 
-        private void verifierClient_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            WindowVerifierClient windowVerifierClient = new WindowVerifierClient();
-            windowVerifierClient.Show();
-        }
+     
     }
 }

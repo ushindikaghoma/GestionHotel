@@ -49,10 +49,8 @@ namespace GestionHotel.Windows.Clients
                 AffectationModel client_selectionne = liste_clients_affectes.ToList()[position];
 
                 WindowDetailsClient detailsClient = new WindowDetailsClient();
-                detailsClient.txt_details_code_client.Text = client_selectionne.CodeClient;
-                detailsClient.txt_detais_code_chambre.Text = client_selectionne.CodeChambre;
                 detailsClient.txt_details_date_affectation.Text = Convert.ToDateTime(client_selectionne.DateAffectation).ToString();
-                detailsClient.txt_details_tarif_chambre.Text = Convert.ToDouble(client_selectionne.TarifChambre).ToString();
+                detailsClient.txt_details_tarif_chambre.Text = Convert.ToDouble(client_selectionne.TarifChambre).ToString()+"$";
                 //detailsClient.txt_details_cat_client.Text = client_selectionne.CategorieClient;
 
                 detailsClient.Show();

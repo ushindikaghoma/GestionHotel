@@ -14,6 +14,7 @@
     <None Remove="Images\logo.png" />
     <None Remove="Images\logo_guest.png" />
     <None Remove="Images\logo_guesthouse.png" />
+    <None Remove="Images\profile.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,6 +36,7 @@
     <Resource Include="Images\logo.png" />
     <Resource Include="Images\logo_guest.png" />
     <Resource Include="Images\logo_guesthouse.png" />
+    <Resource Include="Images\profile.png" />
   </ItemGroup>
 
 </Project>

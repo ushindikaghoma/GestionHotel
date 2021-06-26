@@ -11,7 +11,7 @@
         <Image Source="/Images/logo_guest.png"
                        VerticalAlignment="Top"
                        Stretch="Fill"
-                       Width="500"
+                       Width="800"
                Height="300"/>
     </Grid>
 </Page>

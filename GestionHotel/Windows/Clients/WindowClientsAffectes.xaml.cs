@@ -1,6 +1,8 @@
 ﻿using ClassLibraryGestionHotel.Affectation;
+using GestionHotel.Windows.Paiement;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -18,6 +20,7 @@ namespace GestionHotel.Windows.Clients
     /// </summary>
     public partial class WindowClientsAffectes : Window
     {
+        int position = -1;
         IEnumerable<AffectationModel> liste_clients_affectes;
         public WindowClientsAffectes()
         {
@@ -37,6 +40,53 @@ namespace GestionHotel.Windows.Clients
         private void fermerWindowclientaffectes_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_affecter_paiement_Click(object sender, RoutedEventArgs e)
+        {
+            if (listeview_clients_affectes.SelectedItems.Count > 0)
+            {
+                position = listeview_clients_affectes.Items.IndexOf(listeview_clients_affectes.SelectedItems[0]);
+
+                AffectationModel client_selectionne = liste_clients_affectes.ToList()[position];
+
+                WindowValiderPaiement windowValiderPaiement = new WindowValiderPaiement();
+
+                windowValiderPaiement.txt_details_code_client.Text = client_selectionne.CodeClient.ToString();
+
+
+                windowValiderPaiement.Show();
+            }
+            else
+            {
+                MessageBox.Show("Vous devez d'abord selectionner un client");
+            }
+        }
+
+        private void btn_affecter_verifier_Click(object sender, RoutedEventArgs e)
+        {
+            if (listeview_clients_affectes.SelectedItems.Count > 0)
+            {
+                position = listeview_clients_affectes.Items.IndexOf(listeview_clients_affectes.SelectedItems[0]);
+
+                AffectationModel client_selectionne = liste_clients_affectes.ToList()[position];
+
+                WindowDetailsClient detailsClient = new WindowDetailsClient();
+                detailsClient.txt_details_date_affectation.Text = Convert.ToDateTime(client_selectionne.DateAffectation).ToString();
+                detailsClient.txt_details_tarif_chambre.Text = Convert.ToDouble(client_selectionne.TarifChambre).ToString() + "$";
+                //detailsClient.txt_details_cat_client.Text = client_selectionne.CategorieClient;
+
+                detailsClient.Show();
+            }
+            else
+            {
+                MessageBox.Show("Vous devez d'abord selectionner un client");
+            }
+        }
+
+        private void btn_affecter_supprimer_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

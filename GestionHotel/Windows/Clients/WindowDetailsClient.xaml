@@ -17,46 +17,28 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                 <StackPanel Orientation="Vertical" Margin="10 60 0 0" HorizontalAlignment="Left">
+                    
                     <TextBlock Width="120"
                            FontSize="15"
-                           Margin=" 10">
-                Code client
+                            Margin=" 10"
+                            FontWeight="Bold"   >
+                Date éxpiration :
                     </TextBlock>
                     <TextBlock Width="120"
                            FontSize="15"
-                            Margin=" 10">
-                Code chambre
+                            Margin=" 10"
+                            FontWeight="Bold"   >
+                Tarif chambre :
                     </TextBlock>
                     <TextBlock Width="120"
                            FontSize="15"
-                            Margin=" 10">
-                Date affectation
-                    </TextBlock>
-                    <TextBlock Width="120"
-                           FontSize="15"
-                            Margin=" 10">
-                Tarif chambre
-                    </TextBlock>
-                    <TextBlock Width="120"
-                           FontSize="15"
-                            Margin=" 10">
-                Categorie client
+                            Margin=" 10"
+                            FontWeight="Bold"   >
+                Categorie client :
                     </TextBlock>
                 </StackPanel>
                 <StackPanel >
                     <StackPanel Orientation="Vertical" Margin="10 60 0 0" HorizontalAlignment="Left">
-                        <TextBlock Width="120"
-                           FontSize="15"
-                           Margin=" 10"
-                               Name="txt_details_code_client">
-                0032
-                        </TextBlock>
-                        <TextBlock Width="120"
-                           FontSize="15"
-                            Margin=" 10"
-                            Name="txt_detais_code_chambre">
-                Ch1
-                        </TextBlock>
                         <TextBlock Width="120"
                            FontSize="15"
                             Margin=" 10"
@@ -81,8 +63,47 @@
                         Background="Beige"
                         Margin="10 0 0 0"
                         Width="400"
-                        Height="200" RenderTransformOrigin="0.458,-0.162">
-
+                        Height="200">
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel>
+                            <Border Width="100" Height="100"
+                            HorizontalAlignment="Left"
+                            CornerRadius="80"
+                            BorderBrush="Gray"
+                            BorderThickness="1"
+                            Margin="10">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="/Images/profile.png"/>
+                                </Border.Background>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical" Width="280" Margin="0 0 10 0">
+                            <StackPanel Orientation="Horizontal" Margin="10">
+                                <TextBlock Text="Nom:" FontWeight="Bold"/>
+                                <TextBlock Text="Ushindi" Margin="30 0 20 0" FontStyle="Italic"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="10 0 0 0">
+                                <TextBlock Text="Postnom:" FontWeight="Bold"/>
+                                <TextBlock Text="Kaghoma" Margin="30 0 20 10" FontStyle="Italic"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="10 0 0 0">
+                                <TextBlock Text="Prenom:" FontWeight="Bold"/>
+                                <TextBlock Text="Muhindo" Margin="30 0 20 0" FontStyle="Italic"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="10 10 0 0">
+                                <TextBlock Text="Telephone:" FontWeight="Bold"/>
+                                <TextBlock Text="+243997245164" Margin="30 0 20 0" FontStyle="Italic"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="10 10 0 0">
+                                <TextBlock Text="Email:" FontWeight="Bold"/>
+                                <TextBlock Text="ushindikaghommachris@gmail.com" Margin="30 0 20 0" FontStyle="Italic"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="10 10 0 0">
+                                <TextBlock Text="Categorie membre:" FontWeight="Bold"/>
+                                <TextBlock Text="Gold" Margin="30 0 20 0" FontStyle="Italic"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
                 </StackPanel>
             </StackPanel>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="15 0 15 20">

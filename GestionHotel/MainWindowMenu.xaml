@@ -6,7 +6,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:GestionHotel"
         mc:Ignorable="d"
-        Title="MainWindowMenu" Height="Auto" Width="Auto" WindowState="Maximized" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="SingleBorderWindow">
+        Title="Menu principal" Height="Auto" Width="Auto" WindowState="Maximized" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="SingleBorderWindow">
 
     <Window.Resources>
         <Storyboard x:Key="MenuOpen">
@@ -79,24 +79,20 @@
                             <TextBlock Margin="10 10" Text="Clients" VerticalAlignment="Center" FontSize="17"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="60" Name="verifierClient" PreviewMouseLeftButtonUp="verifierClient_PreviewMouseLeftButtonUp">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="VerifiedUser" Width="25" Height="25" Margin="10" VerticalAlignment="Center"></materialDesign:PackIcon>
-                            <TextBlock Margin="10 10" Text="Verification clients" VerticalAlignment="Center" FontSize="17"/>
-                        </StackPanel>
-                    </ListViewItem>
+                    
                     <ListViewItem Height="60" Name="ListeClient" PreviewMouseLeftButtonUp="ListeClient_PreviewMouseLeftButtonUp">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="ViewList" Width="25" Height="25" Margin="10" VerticalAlignment="Center"></materialDesign:PackIcon>
                             <TextBlock Margin="10 10" Text="Clients affectés" VerticalAlignment="Center" FontSize="17"/>
                         </StackPanel>
                     </ListViewItem>
+                    
                     <ListViewItem Height="60" Name="Dashboard" PreviewMouseRightButtonUp="Dashboard_PreviewMouseRightButtonUp">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="ViewDashboard" Width="25" Height="25" Margin="10" VerticalAlignment="Center"></materialDesign:PackIcon>
                             <TextBlock Margin="10 10" Text="Dashboard" VerticalAlignment="Center" FontSize="17"/>
                         </StackPanel>
-                    </ListViewItem>
+                    </ListViewItem>                    
                 </ListView>
             </StackPanel>
         </Grid>
